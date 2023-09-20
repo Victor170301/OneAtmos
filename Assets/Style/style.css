@@ -57,3 +57,6 @@ body
     font-size: 1.1rem;  
 } 
 
+.menu-content:hover > :not(:hover){
+    filter: blur(50);
+}
