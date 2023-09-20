@@ -22,15 +22,45 @@
 body 
 {
     background-color: black;
+    
 }
 
-nav > div
+.menu-content
 {
     background-color: var(--cor4);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    height: auto;
+      
 }
 
-nav > img 
+.menu-content > img 
 {
-    height: 200px;
+    height: 80px;
+    margin-top: 15px;
+    width: auto;
 }
 
+.menu-content > ul 
+{
+    list-style-type: none;
+    display: flex;
+}
+
+.menu-content  ul  a 
+{
+    text-decoration: none;
+    padding: 15px;
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.1rem;  
+} 
+
+header 
+{
+    min-width: 500px;
+    max-width: 1280px;
+    margin: auto;
+}
