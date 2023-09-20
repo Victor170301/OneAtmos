@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
+/* Definindo as variáveis de cor */
 :root {
     --cor1: #0E0359;
     --cor2:  #371075;
@@ -14,49 +14,102 @@
     --cor7: black;
 }
 
-*{
+/* Resetando margens e paddings */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body 
-{
-    background-color: black;
-    
+body {
+    background-color: var(--cor1);
+    font-family: 'Roboto', sans-serif;
 }
 
-.menu-content
-{
+.menu-content {
     background-color: var(--cor4);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    
-      
+    padding: 10px 20px;
 }
 
-.menu-content > img 
-{
+.menu-content > img {
     height: 80px;
-    margin-top: 15px;
     width: auto;
 }
 
-.menu-content > ul 
-{
+.menu-content > ul {
     list-style-type: none;
     display: flex;
+    align-items: center;
 }
 
-.menu-content  ul  a 
-{
+.menu-content ul a {
     text-decoration: none;
     padding: 15px;
-    font-family: 'Roboto';
     color: white;
-    font-size: 1.1rem;  
-} 
-
-.menu-content:hover > :not(:hover){
-    filter: blur(50);
+    font-size: 1.1rem;
+    transition: text-shadow 0.5s, transform 0.5s;
 }
+
+.menu-content ul a:hover {
+    transform: scale(1.9);
+    text-shadow: 1px 1px 10px var(--cor1);
+    font-weight: bold;
+}
+
+/* Estilos específicos para dispositivos móveis e tablets */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .menu-content {
+        flex-direction: column;
+    }
+
+    .menu-content > img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .menu-content ul {
+        flex-direction: column;
+    }
+
+    .menu-content ul a {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
+
+/* 
+   Para tornar o site responsivo, considere as seguintes práticas e técnicas:
+
+   1. Layout Flexível (Flexbox ou Grid):
+      - Use Flexbox ou Grid para criar um layout flexível que se adapte a diferentes dispositivos.
+
+   2. Consultas de Mídia (Media Queries):
+      - Utilize @media queries para aplicar estilos específicos com base no tamanho da tela.
+
+   3. Imagens Responsivas:
+      - Utilize "max-width: 100%" para garantir que as imagens não ultrapassem a largura do contêiner pai.
+
+   4. Unidades Flexíveis:
+      - Use unidades flexíveis como porcentagem (%) e em para dimensionar elementos de forma relativa.
+
+   5. Fontes Responsivas:
+      - Considere o uso de tamanhos de fonte relativos, como em e rem, para fontes escaláveis.
+
+   6. Testes em Diferentes Dispositivos:
+      - Teste o site em vários dispositivos para garantir a funcionalidade e a aparência adequada.
+
+   7. Adaptação de Conteúdo:
+      - Adapte a apresentação do conteúdo para dispositivos menores, reorganizando ou ocultando elementos, se necessário.
+
+   8. Performance Otimizada:
+      - Otimize o desempenho do site, considerando a eficiência no carregamento de recursos.
+
+   Lembre-se de aplicar essas práticas para criar um site com uma ótima experiência do usuário em diversos dispositivos.
+*/
