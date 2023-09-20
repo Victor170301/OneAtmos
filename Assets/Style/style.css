@@ -205,3 +205,27 @@ body {
 {
     opacity: 0;
 }
+
+/* ... (seu código existente) ... */
+
+/* Estilos para tornar a página responsiva */
+@media (max-width: 767px) {
+    .fotoeu {
+        width: 100%; /* Ajuste a largura conforme necessário */
+        max-width: none; /* Resetando a largura máxima */
+        position: static; /* Voltando à posição estática para seguir o fluxo do documento */
+        top: auto; /* Resetando a posição top */
+        right: auto; /* Resetando a posição right */
+        transition: none; /* Resetando a transição */
+    }
+
+    .paixao,
+    .retangulo,
+    .name {
+        position: static; /* Resetando a posição */
+        width: auto; /* Permitindo que a largura seja definida automaticamente */
+        height: auto; /* Permitindo que a altura seja definida automaticamente */
+        opacity: 100; /* Garantindo que a opacidade seja 100% */
+        transition-duration: none; /* Resetando a duração da transição */
+    }
+}
