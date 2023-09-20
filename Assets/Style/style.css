@@ -31,8 +31,7 @@ body
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: auto;
-    height: auto;
+    
       
 }
 
@@ -58,9 +57,3 @@ body
     font-size: 1.1rem;  
 } 
 
-header 
-{
-    min-width: 500px;
-    max-width: 1280px;
-    margin: auto;
-}
